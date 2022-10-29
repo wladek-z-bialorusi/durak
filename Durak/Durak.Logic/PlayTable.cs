@@ -18,7 +18,16 @@ namespace Durak.Logic
 
         public CardSuit Trump { get; }
 
-        public IEnumerable<Card> Cards => _cards;
+        public IEnumerable<Card> Cards
+        {
+            get
+            {
+                foreach (var card in _cards)
+                {
+                    yield return card;
+                }
+            }
+        }
 
         /// <summary>
         /// Add a new card to the table.
