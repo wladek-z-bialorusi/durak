@@ -37,6 +37,12 @@ namespace Durak.Logic
             }
         }
 
+        public void TakeCardsFromTable()
+        {
+            _cards.AddRange(_playTable.Cards);
+            _playTable.RemoveAllCards();
+        }
+
         private bool Attack()
         {
             IEnumerable<Card> cardsAllowedForAttack = _playTable.Cards.Any() ?
