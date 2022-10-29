@@ -28,7 +28,6 @@ namespace Durak.ConsoleUI
             _defender.TakeCardsFromDeck();
             while (PlayOneTurn())
             {
-                SwapPlayers();
             }
 
             return new Player[] { _attacker, _defender }.Where(p => !p.Cards.Any()).First();
@@ -37,6 +36,7 @@ namespace Durak.ConsoleUI
 
         public bool PlayOneTurn()
         {
+            bool successfulAttack = false;
             while (true)
             {
                 _consoleGraphics.Display();
@@ -49,9 +49,15 @@ namespace Durak.ConsoleUI
                 _consoleGraphics.Display();
                 if (!_defender.Play())
                 {
+                    successfulAttack = true;
                     _defender.TakeCardsFromTable();
                     break;
                 }
+            }
+
+            if (!successfulAttack)
+            {
+                SwapPlayers();
             }
 
             _attacker.TakeCardsFromDeck();
