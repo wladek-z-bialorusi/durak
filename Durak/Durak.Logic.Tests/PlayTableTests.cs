@@ -3,7 +3,7 @@ using Durak.Logic.Models;
 
 namespace Durak.Logic.Tests
 {
-    public class Tests
+    public class PlayTableTests
     {
         private PlayTable _playTable;
         private CardSuit _trump;

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak.Logic", "Durak.Logic\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak.Logic.Tests", "Durak.Logic.Tests\Durak.Logic.Tests.csproj", "{15B828AE-8F3D-4567-8A36-275BEDF91506}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durek.Shared", "Durek.Shared\Durek.Shared.csproj", "{3102F905-67F4-494A-BF69-D9C5BDF58545}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
