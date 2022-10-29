@@ -6,12 +6,14 @@ namespace Durak.ConsoleUI
 {
     internal class Game
     {
+        private PlayTable _playTable;
         private Player _attacker;
         private Player _defender;
         private ConsoleGraphics _consoleGraphics;
 
         public Game(Stack<Card> deck, PlayTable playTable, Player firstPlayer, Player secondPlayer, ConsoleGraphics consoleGraphics)
         {
+            _playTable = playTable;
             (_attacker, _defender) = (firstPlayer, secondPlayer);//FirstAttackerAndDefender.Find(firstPlayer, secondPlayer);
             _consoleGraphics = consoleGraphics;
         }
@@ -38,7 +40,12 @@ namespace Durak.ConsoleUI
             while (true)
             {
                 _consoleGraphics.Display();
-                _attacker.Play();
+                if (!_attacker.Play())
+                {
+                    _playTable.RemoveAllCards();
+                    break;
+                }
+
                 _consoleGraphics.Display();
                 if (!_defender.Play())
                 {
