@@ -35,10 +35,14 @@ namespace Durak.ConsoleUI
         {
             Console.Clear();
             Card[] tableCards = _playTable.Cards.ToArray();
-            Console.Write($"Bot: {_bot.Cards.Count()} cards");
+            for (int i = 0; i < _bot.Cards.Count(); ++i)
+            {
+                Console.Write($"##|");
+            }
+
             Console.WriteLine();
             Console.WriteLine();
-            Console.Write($"#{CardToString(_trump)}#|");
+            Console.Write($"##|{CardToString(_trump)}|");
             for (int i = 0; i < tableCards.Length; )
             {
                 Console.Write($"{CardToString(tableCards[i])}");
