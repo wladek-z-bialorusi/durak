@@ -34,6 +34,8 @@ namespace Durak.ConsoleUI
                 else
                 {
                     --Console.CursorTop;
+                    Console.Write(" ");
+                    --Console.CursorLeft;
                 }
             }
         }
