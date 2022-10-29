@@ -32,9 +32,12 @@ namespace Durak.Logic
                 return false;
             }
 
-            _playTable.AddCard(_cards.Any(c => c.CardSuit != _playTable.Trump) ?
+            Card cardAttacker = _cards.Any(c => c.CardSuit != _playTable.Trump) ?
                 _cards.Where(c => c.CardSuit != _playTable.Trump).MinBy(c => c.CardNumber) :
-                _cards.MinBy(c => c.CardNumber));
+                _cards.MinBy(c => c.CardNumber);
+
+            _playTable.AddCard(cardAttacker);
+            _cards.Remove(cardAttacker);
 
             return true;
         }
