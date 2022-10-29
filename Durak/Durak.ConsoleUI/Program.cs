@@ -15,7 +15,10 @@ namespace Durak.ConsoleUI
             var bot = new Bot(playTable, deck);
             var consoleGraphics = new ConsoleGraphics(human, bot, playTable, deck, trump);
 
-            new Game(deckAndTrump.deck, playTable, human, bot, consoleGraphics).Play();
+            var winner = new Game(deckAndTrump.deck, playTable, human, bot, consoleGraphics).Play();
+            Console.WriteLine(winner.GetType() == typeof(Bot) ? "You lost" : "You won");
+            Console.WriteLine("Press any key to exit...");
+            Console.Read();
         }
     }
 }
