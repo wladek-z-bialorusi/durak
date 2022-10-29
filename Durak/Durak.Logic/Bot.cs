@@ -32,11 +32,16 @@ namespace Durak.Logic
                 return false;
             }
 
-            Card cardAttacker = _cards.Any(c => c.CardSuit != _playTable.Trump) ?
-                _cards.Where(c => c.CardSuit != _playTable.Trump).MinBy(c => c.CardNumber) :
-                _cards.MinBy(c => c.CardNumber);
+            Card cardAttacker = cardsAllowedForAttack.Any(c => c.CardSuit != _playTable.Trump) ?
+                cardsAllowedForAttack.Where(c => c.CardSuit != _playTable.Trump).MinBy(c => c.CardNumber) :
+                cardsAllowedForAttack.MinBy(c => c.CardNumber);
 
-            _playTable.AddCard(cardAttacker);
+            bool success = _playTable.AddCard(cardAttacker);
+            if (!success)
+            {
+                throw new InvalidOperationException("Bot's logic allowed an invalid card on the table");
+            }
+
             _cards.Remove(cardAttacker);
 
             return true;
