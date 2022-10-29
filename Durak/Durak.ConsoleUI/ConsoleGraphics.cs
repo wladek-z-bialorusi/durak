@@ -35,6 +35,7 @@ namespace Durak.ConsoleUI
         {
             Console.Clear();
             Card[] tableCards = _playTable.Cards.ToArray();
+            Console.Write("        |");
             for (int i = 0; i < _bot.Cards.Count(); ++i)
             {
                 Console.Write($"##|");
@@ -42,30 +43,48 @@ namespace Durak.ConsoleUI
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.Write($"##|{CardToString(_trump)}|");
+            if (_deck.Count >= 2)
+            {
+                Console.Write($"##|{CardToString(_trump)}|  ");
+            }
+            else if (_deck.Count == 1)
+            {
+                Console.Write($"  |{CardToString(_trump)}|  ");
+            }
+            else
+            {
+                Console.Write($"  |  |  ");
+            }
+
             for (int i = 0; i < tableCards.Length; )
             {
-                Console.Write($"{CardToString(tableCards[i])}");
+                Console.Write($"|{CardToString(tableCards[i])} : ");
                 ++i;
                 if (i == tableCards.Length)
                 {
                     break;
                 }
 
-                Console.Write($" : {CardToString(tableCards[i])}|");
+                Console.Write($"{CardToString(tableCards[i])}|");
                 ++i;
             }
 
             Console.WriteLine();
             Console.WriteLine();
 
-            Console.Write("|");
+            Console.Write("        |");
+            int cardNumber = 1;
             foreach (var c in _human.Cards)
             {
                 Console.Write($"{CardToString(c)}|");
+                Console.CursorTop += 2;
+                Console.CursorLeft -= 2;
+                Console.Write(cardNumber++);
+                Console.CursorTop -= 2;
+                Console.CursorLeft += 1;
             }
 
-            Console.WriteLine();
+            Console.WriteLine("\n\n");
         }
 
         private static string CardToString(Card card)
