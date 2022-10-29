@@ -64,7 +64,7 @@ namespace Durak.Logic
         {
             if (_cards[^1].CardSuit != Trump)
             {
-                if (card.CardNumber > _cards[^1].CardNumber || card.CardSuit == Trump)
+                if (card.CardNumber > _cards[^1].CardNumber && card.CardSuit == _cards[^1].CardSuit || card.CardSuit == Trump)
                 {
                     _cards.Add(card);
                     return true;
