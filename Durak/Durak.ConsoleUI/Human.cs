@@ -27,7 +27,7 @@ namespace Durak.ConsoleUI
                     _cards.RemoveAt(index - 1);
                     return true;
                 }
-                else if (input == "n")
+                else if (input == "" && _playTable.Cards.Any())
                 {
                     return false;
                 }
