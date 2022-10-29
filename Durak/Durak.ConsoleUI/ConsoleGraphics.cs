@@ -62,7 +62,6 @@ namespace Durak.ConsoleUI
             }
 
             Console.WriteLine();
-            Console.Write(">");
         }
 
         private static string CardToString(Card card)
