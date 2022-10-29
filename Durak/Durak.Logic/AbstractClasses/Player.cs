@@ -31,5 +31,26 @@ namespace Durak.Logic.AbstractClasses
             _cards.AddRange(_playTable.Cards);
             _playTable.RemoveAllCards();
         }
+
+        public IEnumerable<Card> Cards
+        {
+            get
+            {
+                foreach(var card in _cards)
+                {
+                    yield return card;
+                }
+            }
+        }
+
+        public Card? LowestTrumpCard()
+        {
+            return _cards.Where(c => c.CardSuit == _playTable.Trump).MinBy(c => c.CardNumber);
+        }
+
+        public Card LowestCard()
+        {
+            return _cards.MinBy(c => c.CardNumber);
+        }
     }
 }
