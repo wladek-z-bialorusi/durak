@@ -64,6 +64,7 @@ namespace Durak.Logic
             }
 
             bool success = _playTable.AddCard(cardDefender);
+            _cards.Remove(cardDefender);
             if (!success)
             {
                 throw new InvalidOperationException("Bot's logic allowed an invalid card on the table");
