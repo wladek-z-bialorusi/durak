@@ -2,8 +2,8 @@
 {
     public enum CardSuit
     {
-        Diamonds,
         Clubs,
+        Diamonds,
         Hearts,
         Spades
     }
