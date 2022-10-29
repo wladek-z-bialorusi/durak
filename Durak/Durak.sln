@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak.ConsoleUI", "Durak.ConsoleUI\Durak.ConsoleUI.csproj", "{4EF17E0D-9D5C-420B-AD80-43FD29C75EAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durak.ConsoleUI", "Durak.ConsoleUI\Durak.ConsoleUI.csproj", "{4EF17E0D-9D5C-420B-AD80-43FD29C75EAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak.Logic", "Durak.Logic\Durak.Logic.csproj", "{4F519A8B-5E97-40CF-B6F6-15792352ADE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durak.Logic", "Durak.Logic\Durak.Logic.csproj", "{4F519A8B-5E97-40CF-B6F6-15792352ADE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak.Logic.Tests", "Durak.Logic.Tests\Durak.Logic.Tests.csproj", "{15B828AE-8F3D-4567-8A36-275BEDF91506}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durak.Logic.Tests", "Durak.Logic.Tests\Durak.Logic.Tests.csproj", "{15B828AE-8F3D-4567-8A36-275BEDF91506}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durek.Shared", "Durek.Shared\Durek.Shared.csproj", "{3102F905-67F4-494A-BF69-D9C5BDF58545}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Durak.Shared", "Durak.Shared\Durak.Shared.csproj", "{D73551A6-DEE5-4316-A804-3DD5D458964C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B828AE-8F3D-4567-8A36-275BEDF91506}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3102F905-67F4-494A-BF69-D9C5BDF58545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73551A6-DEE5-4316-A804-3DD5D458964C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73551A6-DEE5-4316-A804-3DD5D458964C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73551A6-DEE5-4316-A804-3DD5D458964C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73551A6-DEE5-4316-A804-3DD5D458964C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

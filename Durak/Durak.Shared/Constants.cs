@@ -1,4 +1,4 @@
-﻿namespace Durek.Shared
+﻿namespace Durak.Shared
 {
     public static class Constants
     {

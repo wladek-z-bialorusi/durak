@@ -1,23 +1,15 @@
-﻿using Durak.Logic.Models;
-using Durek.Shared;
+﻿using Durak.Logic.AbstractClasses;
+using Durak.Logic.Models;
 
 namespace Durak.Logic
 {
-    public class Bot
+    public class Bot : Player
     {
-        private PlayTable _playTable;
-        private List<Card> _cards;
-        private Stack<Card> _deck;
-
-
-        public Bot(PlayTable playTable, Stack<Card> deck)
+        public Bot(PlayTable playTable, Stack<Card> deck) : base(playTable, deck)
         {
-            _playTable = playTable;
-            _cards = new List<Card>();
-            _deck = deck;
         }
 
-        public bool Play()
+        public override bool Play()
         {
             if (_playTable.Cards.Count() % 2 == 0)
             {
@@ -27,20 +19,6 @@ namespace Durak.Logic
             {
                 return Defend();
             }
-        }
-
-        public void TakeCardsFromDeck()
-        {
-            while(_cards.Count < Constants.NumberOfCards && _deck.Count > 0)
-            {
-                _cards.Add(_deck.Pop());
-            }
-        }
-
-        public void TakeCardsFromTable()
-        {
-            _cards.AddRange(_playTable.Cards);
-            _playTable.RemoveAllCards();
         }
 
         private bool Attack()

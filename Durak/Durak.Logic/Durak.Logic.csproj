@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Durek.Shared\Durek.Shared.csproj" />
+    <ProjectReference Include="..\Durak.Shared\Durak.Shared.csproj" />
   </ItemGroup>
 
 </Project>
